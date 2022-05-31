@@ -5,10 +5,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class CommandService {
+public class CommandService implements CommandEngine{
     private final CommandRetriever commandRetriever;
     private final CommandValidator commandValidator;
 
+    @Override
     public final String handleCommand(String command) throws EmptyInputException {
         switch(command) {
             case "VERSION":
