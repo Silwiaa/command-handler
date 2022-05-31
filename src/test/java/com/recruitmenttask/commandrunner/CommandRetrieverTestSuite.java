@@ -5,10 +5,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.Clock;
 import java.time.LocalTime;
 
-import static java.time.temporal.ChronoField.SECOND_OF_MINUTE;
 import static org.junit.Assert.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
