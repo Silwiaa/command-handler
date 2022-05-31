@@ -1,7 +1,8 @@
 package com.recruitmenttask.commandrunner;
 
-import org.springframework.stereotype.Component;
+import lombok.Getter;
 
+@Getter
 public enum Method {
     VERSION("VERSION"),
     PING("PING"),
@@ -10,9 +11,5 @@ public enum Method {
 
     Method(String method) {
         this.method = method;
-    }
-
-    public String getMethod() {
-        return method;
     }
 }
