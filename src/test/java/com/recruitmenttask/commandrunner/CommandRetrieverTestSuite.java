@@ -5,8 +5,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.time.Clock;
 import java.time.LocalTime;
 
+import static java.time.temporal.ChronoField.SECOND_OF_MINUTE;
 import static org.junit.Assert.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
@@ -41,13 +43,15 @@ public class CommandRetrieverTestSuite {
     @Test
     public void shouldGetTime() {
         //Given
-        String expectedVal = LocalTime.now().toString();
+        LocalTime expectedVal = LocalTime.now();
 
         //When
-        String resultVal = commandRetriever.getTime();
+        LocalTime resultVal = LocalTime.parse(commandRetriever.getTime());
 
         //Then
-        assertEquals(expectedVal, resultVal);
+        assertEquals(expectedVal.getHour(), resultVal.getHour());
+        assertEquals(expectedVal.getMinute(), resultVal.getMinute());
+        assertEquals(expectedVal.getSecond(), resultVal.getSecond());
     }
 
     @Test
