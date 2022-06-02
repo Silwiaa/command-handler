@@ -1,7 +1,7 @@
 package com.recruitmenttask.commandrunner.service;
 
-import com.recruitmenttask.commandrunner.CommandFactory;
-import com.recruitmenttask.commandrunner.EmptyInputException;
+import com.recruitmenttask.commandrunner.factory.CommandFactory;
+import com.recruitmenttask.commandrunner.exception.EmptyInputException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.recruitmenttask.commandrunner;
+package com.recruitmenttask.commandrunner.validator;
 
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;

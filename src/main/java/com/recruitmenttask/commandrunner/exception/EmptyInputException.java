@@ -1,4 +1,4 @@
-package com.recruitmenttask.commandrunner;
+package com.recruitmenttask.commandrunner.exception;
 
 public class EmptyInputException extends Exception {
     public EmptyInputException(String message) {

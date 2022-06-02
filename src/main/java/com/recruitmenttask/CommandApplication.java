@@ -1,10 +1,9 @@
 package com.recruitmenttask;
 
-import com.recruitmenttask.commandrunner.CommandFactory;
-import com.recruitmenttask.commandrunner.CommandValidator;
-import com.recruitmenttask.commandrunner.EmptyInputException;
+import com.recruitmenttask.commandrunner.factory.CommandFactory;
+import com.recruitmenttask.commandrunner.validator.CommandValidator;
+import com.recruitmenttask.commandrunner.exception.EmptyInputException;
 import com.recruitmenttask.commandrunner.service.CommandService;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
