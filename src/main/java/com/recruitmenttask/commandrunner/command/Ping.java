@@ -1,5 +1,9 @@
 package com.recruitmenttask.commandrunner.command;
 
+import com.recruitmenttask.commandrunner.Command;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Ping implements Command {
     private static final String NAME = "PING";
     private String arg;
