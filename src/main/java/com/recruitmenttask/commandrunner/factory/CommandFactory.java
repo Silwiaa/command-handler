@@ -1,15 +1,24 @@
 package com.recruitmenttask.commandrunner.factory;
 
+import com.recruitmenttask.commandrunner.Command;
 import com.recruitmenttask.commandrunner.command.*;
 import com.recruitmenttask.commandrunner.exception.EmptyInputException;
 import com.recruitmenttask.commandrunner.validator.CommandValidator;
 import lombok.AllArgsConstructor;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Service;
+
+import javax.swing.plaf.synth.SynthTextAreaUI;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
 public final class CommandFactory {
     private final CommandValidator commandValidator;
+    public static String commandList = "";
 
     public String handleCommand(String passedCommand) throws EmptyInputException {
         if (passedCommand.isEmpty()) throw new EmptyInputException("Input can not be null");
@@ -78,7 +87,8 @@ public final class CommandFactory {
     }
 
     private String getMethods() {
-        //will be refactored
-        return "All methods";
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.recruitmenttask.commandrunner.command");
+        Arrays.stream(context.getBeanNamesForType(Command.class)).forEach(c -> commandList += c + ", ");
+        return commandList.substring(0, commandList.length() -2);
     }
 }
