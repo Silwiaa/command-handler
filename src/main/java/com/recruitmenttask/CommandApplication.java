@@ -14,6 +14,8 @@ public class CommandApplication {
         CommandService commandService = new CommandService(new CommandFactory(new CommandValidator()));
         System.out.println(commandService.handleCommand("version"));
         System.out.println(commandService.handleCommand("version x"));
+        System.out.println(commandService.help("help"));
+        System.out.println(commandService.help("help version"));
         //SpringApplication.run(CommandApplication.class, args);
     }
 }
