@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 @Service
 @AllArgsConstructor
-public final class CommandFactory {
+public class CommandFactory {
     private final CommandValidator commandValidator;
     public static String commandList = "";
 
