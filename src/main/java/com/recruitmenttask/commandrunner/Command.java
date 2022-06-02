@@ -1,4 +1,4 @@
-package com.recruitmenttask.commandrunner.command;
+package com.recruitmenttask.commandrunner;
 
 public interface Command {
     String run();
