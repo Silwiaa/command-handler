@@ -9,5 +9,4 @@ class CommandApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }
