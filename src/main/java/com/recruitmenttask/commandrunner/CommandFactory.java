@@ -21,7 +21,7 @@ public final class CommandFactory {
             commandName = passedCommand;
         } else {
             arg = getArg(passedCommand);
-            commandName = passedCommand.substring(0, passedCommand.indexOf(" ") -1);
+            commandName = passedCommand.substring(0, passedCommand.indexOf(" "));
         }
 
         Command command;
@@ -51,7 +51,7 @@ public final class CommandFactory {
         if (commandValidator.isNoArgument(passedCommand)) {
             return "wszystkie nazwy";
         } else {
-            commandName = passedCommand.substring(passedCommand.indexOf(" ") +1);
+            commandName = passedCommand.substring(passedCommand.indexOf(" ") + 1);
             arg = getArg(passedCommand);
             Command command;
             switch(commandName) {
@@ -72,6 +72,6 @@ public final class CommandFactory {
     }
 
     private String getArg(String passedCommand) {
-        return passedCommand.substring(passedCommand.indexOf(" "));
+        return passedCommand.substring(passedCommand.indexOf(" ") + 1);
     }
 }

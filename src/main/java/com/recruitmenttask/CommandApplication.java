@@ -12,10 +12,8 @@ public class CommandApplication {
 
     public static void main(String[] args) throws EmptyInputException {
         CommandService commandService = new CommandService(new CommandFactory(new CommandValidator()));
-        System.out.println(commandService.help("help"));
-        System.out.println(commandService.help("help version"));
-        System.out.println(commandService.handleCommand("ping"));
-        System.out.println(commandService.handleCommand("ping next"));
+        System.out.println(commandService.handleCommand("version"));
+        System.out.println(commandService.handleCommand("version x"));
         //SpringApplication.run(CommandApplication.class, args);
     }
 }
