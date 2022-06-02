@@ -16,6 +16,7 @@ public class CommandApplication {
         System.out.println(commandService.handleCommand("version x"));
         System.out.println(commandService.help("help"));
         System.out.println(commandService.help("help version"));
+        System.out.println(commandService.help("help buba"));
         //SpringApplication.run(CommandApplication.class, args);
     }
 }
