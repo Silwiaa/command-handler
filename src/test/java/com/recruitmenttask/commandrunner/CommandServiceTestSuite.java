@@ -14,7 +14,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class CommandServiceTestSuite {
     @InjectMocks
-    private CommandService commandService;
+    private CommandFactory commandService;
 
     @Mock
     private CommandRetriever commandRetriever;
