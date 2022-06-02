@@ -49,7 +49,7 @@ public final class CommandFactory {
         String commandName;
 
         if (commandValidator.isNoArgument(passedCommand)) {
-            return "wszystkie nazwy";
+            return getMethods();
         } else {
             commandName = passedCommand.substring(passedCommand.indexOf(" ") + 1);
             arg = getArg(passedCommand);
@@ -73,5 +73,10 @@ public final class CommandFactory {
 
     private String getArg(String passedCommand) {
         return passedCommand.substring(passedCommand.indexOf(" ") + 1);
+    }
+
+    private String getMethods() {
+        //will be refactored
+        return "All methods";
     }
 }
