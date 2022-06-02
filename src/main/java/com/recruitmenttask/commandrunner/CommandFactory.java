@@ -65,7 +65,7 @@ public final class CommandFactory {
                     command = new Time();
                     break;
                 default:
-                    throw new IllegalStateException("Unexpected value: " + passedCommand);
+                    throw new IllegalStateException("Unexpected value: " + arg);
             }
             return command.getDescription(arg);
         }
